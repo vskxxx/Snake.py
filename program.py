@@ -27,8 +27,8 @@ class Snake:
         
         # Load images
         try:
-            self.glowa_obraz = pygame.image.load("Snake.py/Images.py/head.png")
-            self.segment_obraz = pygame.image.load("Snake.py/Images.py/segment.png")
+            self.glowa_obraz = pygame.image.load("images/head.png")
+            self.segment_obraz = pygame.image.load("images/segment.png")
         except pygame.error:
             # Fallback if images not found - use colored rectangles
             self.glowa_obraz = pygame.Surface((ROZMIAR_KOMORKI, ROZMIAR_KOMORKI))
@@ -79,7 +79,7 @@ class Apple:
         self.generuj_pozycje()
         
         try:
-            self.obraz = pygame.image.load("Snake.py/Images.py/apple.png")
+            self.obraz = pygame.image.load("images/apple.png")
         except pygame.error:
             # Fallback if image not found
             self.obraz = pygame.Surface((ROZMIAR_KOMORKI, ROZMIAR_KOMORKI))
@@ -106,7 +106,7 @@ class Game:
         
         # Load background
         try:
-            self.tlo = pygame.image.load("Snake.py/Images.py/background (1).png")
+            self.tlo = pygame.image.load("images/background (1).png")
             self.tlo = pygame.transform.scale(self.tlo, (SZEROKOSC_OBRAZU, WYSOKOSC_OBRAZU))
         except pygame.error:
             # Create simple background
